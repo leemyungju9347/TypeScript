@@ -1,0 +1,7 @@
+{
+    "comfileOptions": { 
+        "allowJs" : true, // 이 파일안에 js를 허용하는 것
+        "checkJs" : true, // === @ts-check js에서 ts기능활용,타입검사기능을 js에 녹여내겠다.
+        "noImplicitAny": true //모든타입에대해서 최소한 any라고하는 기본적인 타입이라도 넣어야한다.
+    }
+}
