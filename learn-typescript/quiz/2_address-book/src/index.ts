@@ -129,6 +129,20 @@ class AddressBook {
   /* ------------------------------------------------ */
 }
 
+// 실제 코드상에서 dom에 접근해봤을떄 div 는 HTMLEL일수도 있고, null일 수도 있다고 나온다.
+//const div = document.querySelector('div');
+// div가 null일 수도 있을것이라고 추측, div를 보장해줘야한다.
+// if (div) {
+//   div.innerText; // 타입에 대한 값을 보장
+// }
+
+const div = document.querySelector('div') as HTMLDivElement; // 코드가 돌아가는 시점에 div 엘리먼트가 무조건 있을 것이다
+//이런식으로 엘리먼트를 접근했을때 HTMLDivElement라고 타입을 단언하는게 타입 단언
+
+div.innerText; // 값을 바로 단언했기떄문에 div라는 값에 바로 접근해서 사용이 가능
+
+// 정리하자면 타입 단언은 타입스크립트보다 개발자가 타입에 대해서 더 잘 알고있으니 개발자가 타입을 선언해주는 것
+
 /*
     map 
     기존에 배열을 변환해서 새로운 배열을 만들어주는 것
