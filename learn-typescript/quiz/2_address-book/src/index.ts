@@ -1,21 +1,4 @@
-interface PhoneNumberDictionary {
-  [phone: string]: {
-    num: number;
-  };
-}
-
-// 전화번호부의 규칙, 규격 정의
-interface Contact {
-  name: string;
-  address: string;
-  phones: PhoneNumberDictionary;
-}
-
-enum PhoneType {
-  Home = 'home',
-  Office = 'office',
-  Studio = 'studio',
-}
+import { PhoneType, Contact } from './contactTypes';
 
 // api
 // TODO: 아래 함수의 반환 타입을 지정해보세요.
